@@ -1,11 +1,12 @@
 class CategoriesController < ApplicationController
 
+  before_action :set_category, only:[show, edit, update, destroy]
+
   def index
     @categories = Category.all
   end
 
   def show
-    @categories = Category.find(params[:id])
   end
 
   def new
@@ -18,13 +19,16 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
     @category.update(category_params)
     redirect_to category_path(@category)
+  end
+
+  def destroy
+    @category.destroy
+    redirect_to categories_path, status: :see_other
   end
 
   private
@@ -33,4 +37,7 @@ class CategoriesController < ApplicationController
     params.require(:category).permit(:name, :location, :rating, :review)
   end
 
+  def set_category
+    @category = Category.find(params[:id])
+  end
 end
