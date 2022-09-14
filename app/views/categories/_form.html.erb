@@ -1,11 +1,7 @@
-<%= form_with model: @category do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <%= f.label :rating %>
-  <%= f.number_field :rating %>
-   <%= f.label :review %>
-  <%= f.text_field :review %>
+<%= simple_form_for (category) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :rating %>
+  <%= f.input :review %>
   <%= f.submit %>
 <% end %>
