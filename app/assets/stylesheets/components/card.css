@@ -4,7 +4,7 @@
   height: 250px;
   width: 250px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   color: white;
   font-size: 24px;
@@ -12,4 +12,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cards-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
