@@ -1,8 +1,17 @@
-<h1>NUGGET</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>NUGGET <strong>share your favourites</strong> with <strong>your favourites</strong>!</h1>
+    <p>A place to store your favourite things and share with your favourite people</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
 <ul>
   <% @categories.each do |category| %>
-    <li><%= link_to category.name, category_path(category) %></li>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <li><%= link_to category.name, category_path(category) %></li>
+    </div>
   <% end %>
 </ul>
-
+<br>
 <%= link_to "Add New Category", new_category_path(@categories) %>
