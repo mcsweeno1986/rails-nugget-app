@@ -10,15 +10,15 @@ puts "Cleaning database..."
 Category.destroy_all
 
 puts "Creating categories..."
-beauty = {name: "Beauty", location: "London", rating: 5, review: "TBC"}
-local_favs =  {name: "Local Favs", location: "London", rating: 4, review: "TBC"}
-restaurants = {name: "Restaurants", location: "Mexico", rating: 4, review: "TBC"}
-hotels = {name: "Hotels", location: "Worldwide", rating: 4, review: "TBC"}
-travel = {name: "Travel", location: "London", rating: 4, review: "TBC"}
-books = {name: "Books", location: "London", rating: 4, review: "TBC"}
-streaming = {name: "Streaming", location: "worldwideweb", rating: 4, review: "TBC"}
-exercise = {name: "Exercise", location: "London", rating: 4, review: "TBC"}
-pubs = {name: "Pubs/Bars", location: "London", rating: 4, review: "TBC"}
+beauty = {name: "Beauty", title: "TBC", location: "London", rating: 5, review: "TBC"}
+local_favs =  {name: "Local Favs", title: "TBC", location: "London", rating: 4, review: "TBC"}
+restaurants = {name: "Restaurants", title: "TBC", location: "Mexico", rating: 4, review: "TBC"}
+hotels = {name: "Hotels", title: "TBC", location: "Worldwide", rating: 4, review: "TBC"}
+travel = {name: "Travel", title: "TBC", location: "London", rating: 4, review: "TBC"}
+books = {name: "Books", title: "TBC", location: "London", rating: 4, review: "TBC"}
+streaming = {name: "Streaming", title: "TBC", location: "worldwideweb", rating: 4, review: "TBC"}
+exercise = {name: "Exercise", title: "TBC", location: "London", rating: 4, review: "TBC"}
+pubs = {name: "Pubs/Bars", title: "TBC", location: "London", rating: 4, review: "TBC"}
 
 
 [beauty, local_favs, restaurants, hotels, travel, books, streaming, exercise,pubs].each do |attributes|
