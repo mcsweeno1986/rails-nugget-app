@@ -26,3 +26,24 @@ pubs = {name: "Pubs/Bars", title: "TBC", location: "London", rating: 4, review: 
   puts "Created #{category.name}"
 end
 puts "Finished!"
+
+puts "Cleaning database..."
+SubCategory.destroy_all
+
+puts "Creating sub categories..."
+beauty = {name: "MayFive", title: "Beauty", location: "Chiswick", rating: 5, review: "TBC", category_id: Category.find_by(name:'beauty')}
+local_favs =  {name: "Anglesea Arms", title: "Local Favs", location: "Ravenscourt Park", rating: 4, review: "TBC", category_id: Category.find_by(name:'local_favs')}
+restaurants = {name: "Restaurants", title: "TBC", location: "Mexico", rating: 4, review: "TBC", category_id: Category.find_by(name:'restaurants')}
+hotels = {name: "Hotels", title: "TBC", location: "Worldwide", rating: 4, review: "TBC", category_id: Category.find_by(name:'hotels')}
+travel = {name: "Travel", title: "TBC", location: "London", rating: 4, review: "TBC", category_id: Category.find_by(name:'travel')}
+books = {name: "Books", title: "TBC", location: "London", rating: 4, review: "TBC", category_id: Category.find_by(name:'books')}
+streaming = {name: "Streaming", title: "TBC", location: "worldwideweb", rating: 4, review: "TBC", category_id: Category.find_by(name:'streaming')}
+exercise = {name: "Exercise", title: "TBC", location: "London", rating: 4, review: "TBC", category_id: Category.find_by(name:'exercise')}
+pubs = {name: "Pubs/Bars", title: "TBC", location: "London", rating: 4, review: "TBC", category_id: Category.find_by(name:'pubs')}
+
+
+[beauty, local_favs, restaurants, hotels, travel, books, streaming, exercise, pubs].each do |attributes|
+  sub_category = SubCategory.create!(attributes)
+  puts "Created #{sub_category.name}"
+end
+puts "Finished!"

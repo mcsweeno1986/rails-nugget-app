@@ -1,10 +1,10 @@
-<h2><%= @category.name %></h2>
-<p><%= @category.location %></p>
-<p><%= @category.rating %></p>
-<p><%= @category.review %></p>
+<h2><%= @sub_category.name %></h2>
+<p><%= @sub_category.location %></p>
+<p><%= @sub_category.rating %></p>
+<p><%= @sub_category.review %></p>
 
 <%= link_to "Delete",
-  category_path(@category),
+  sub_category_path(@sub_category),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
 
