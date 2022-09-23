@@ -30,8 +30,8 @@ puts "Cleaning database..."
 SubCategory.destroy_all
 
 puts "Creating sub categories..."
-beauty = {name: "MayFive",location: "Chiswick", rating: 5, review: "TBC", category: Category.find_by(title:"Beauty")}
-beauty = {name: "NailsInc",location: "Chiswick", rating: 5, review: "TBC", category: Category.find_by(title:"Beauty")}
+beauty1 = {name: "MayFive",location: "Chiswick", rating: 5, review: "TBC", category: Category.find_by(title:"Beauty")}
+beauty2 = {name: "NailsInc",location: "Chiswick", rating: 5, review: "TBC", category: Category.find_by(title:"Beauty")}
 local_favs =  {name: "Anglesea Arms", location: "Ravenscourt Park", rating: 4, review: "TBC", category: Category.find_by(title:'Local Favs')}
 # restaurants = {name: "Restaurants", title: "TBC", location: "Mexico", rating: 4, review: "TBC", category_id: Category.find_by(name:'Restaurants')}
 # hotels = {name: "Hotels", title: "TBC", location: "Worldwide", rating: 4, review: "TBC", category_id: Category.find_by(name:'Hotels')}
@@ -42,7 +42,7 @@ local_favs =  {name: "Anglesea Arms", location: "Ravenscourt Park", rating: 4, r
 # pubs = {name: "Pubs/Bars", title: "TBC", location: "London", rating: 4, review: "TBC", category_id: Category.find_by(name:'ubs')}
 
 
-[beauty, local_favs].each do |attributes|
+[beauty1, beauty2, local_favs].each do |attributes|
   sub_category = SubCategory.create!(attributes)
   puts "Created #{sub_category.name}"
 end
