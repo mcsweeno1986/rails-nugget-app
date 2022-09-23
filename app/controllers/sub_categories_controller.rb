@@ -9,13 +9,15 @@ class SubCategoriesController < ApplicationController
   end
 
   def new
-    @Sub_categories = SubCategory.new
+    @category = Category.find(params[:category_id])
+    @sub_categories = SubCategory.new
   end
 
   def create
+    @category = Category.find(params[:category_id])
     @sub_category = SubCategory.new(sub_category_params)
     @sub_category.save
-    redirect_to sub_category_path(@sub_category)
+    redirect_to category_sub_category_path(@sub_category)
   end
 
   def edit
@@ -23,12 +25,12 @@ class SubCategoriesController < ApplicationController
 
   def update
     @sub_category.update(sub_category_params)
-    redirect_to sub_category_path(@sub_category)
+    redirect_to new_category_sub_category_path(@sub_categories)
   end
 
   def destroy
     @sub_category.destroy
-    redirect_to sub_categories_path, status: :see_other
+    redirect_to new_category_sub_category_path, status: :see_other
   end
 
   private

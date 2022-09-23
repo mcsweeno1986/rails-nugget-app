@@ -5,9 +5,11 @@ one:
   location: MyString
   rating: 1
   review: MyText
+  category@belongs_to: MyString
 
 two:
   name: MyString
   location: MyString
   rating: 1
   review: MyText
+  category@belongs_to: MyString

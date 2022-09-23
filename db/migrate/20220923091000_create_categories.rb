@@ -1,12 +1,10 @@
 class CreateCategories < ActiveRecord::Migration[7.0]
   def change
     create_table :categories do |t|
-      t.string :name
-      t.string :location
-      t.integer :rating
-      t.text :review
+      t.string :title
 
       t.timestamps
     end
+    add_index :categories, :title, unique: true
   end
 end

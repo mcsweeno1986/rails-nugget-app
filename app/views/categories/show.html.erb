@@ -1,11 +1,9 @@
-<h2><%= @sub_category.name %></h2>
-<p><%= @sub_category.location %></p>
-<p><%= @sub_category.rating %></p>
-<p><%= @sub_category.review %></p>
+<h2><%= @category.title %></h2>
 
-<%= link_to "Delete",
+<%= link_to "Add New", new_category_sub_category_path(@category) %>
+
+
+<%# <%= link_to "Delete",
   sub_category_path(@sub_category),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
-
-<%= link_to "Categories", categories_path %>
