@@ -6,6 +6,7 @@ class SubCategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:category_id])
   end
 
   def new
@@ -15,9 +16,14 @@ class SubCategoriesController < ApplicationController
 
   def create
     @category = Category.find(params[:category_id])
+    @sub_categories = SubCategory.all(@category)
     @sub_category = SubCategory.new(sub_category_params)
-    @sub_category.save
-    redirect_to category_sub_category_path(@sub_category)
+    if
+      @sub_category.save
+      redirect_to category_sub_category_path(@sub_categories)
+    else
+      redirect_to categories_path(@category)
+    end
   end
 
   def edit
@@ -36,7 +42,7 @@ class SubCategoriesController < ApplicationController
   private
 
   def sub_category_params
-    params.require(:category).permit(:name, :location, :rating, :review)
+    params.require(:sub_category).permit(:name, :location, :rating, :review)
   end
 
   def set_sub_category

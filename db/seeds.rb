@@ -31,6 +31,7 @@ SubCategory.destroy_all
 
 puts "Creating sub categories..."
 beauty = {name: "MayFive",location: "Chiswick", rating: 5, review: "TBC", category: Category.find_by(title:"Beauty")}
+beauty = {name: "NailsInc",location: "Chiswick", rating: 5, review: "TBC", category: Category.find_by(title:"Beauty")}
 local_favs =  {name: "Anglesea Arms", location: "Ravenscourt Park", rating: 4, review: "TBC", category: Category.find_by(title:'Local Favs')}
 # restaurants = {name: "Restaurants", title: "TBC", location: "Mexico", rating: 4, review: "TBC", category_id: Category.find_by(name:'Restaurants')}
 # hotels = {name: "Hotels", title: "TBC", location: "Worldwide", rating: 4, review: "TBC", category_id: Category.find_by(name:'Hotels')}
