@@ -7,16 +7,13 @@ class SubCategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:category_id])
   end
 
   def new
-    @category = Category.find(params[:category_id])
     @sub_categories = SubCategory.new
   end
 
   def create
-    # @category = Category.find(params[:category_id])
     @sub_category = SubCategory.new(sub_category_params)
     @sub_category.category = @category
     @sub_category.save
