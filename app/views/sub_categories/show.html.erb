@@ -2,3 +2,6 @@
 <%= @sub_category.location %>
 <%= @sub_category.rating %>
 <%= @sub_category.review %>
+
+<%= link_to "Back", :back %>
+<%= link_to "Delete", category_sub_category_path(@category, @sub_category), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

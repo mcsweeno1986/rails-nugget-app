@@ -1,5 +1,5 @@
 class SubCategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :new, :create]
+  before_action :set_category, only: [:show, :new, :create, :update, :destroy]
   before_action :set_sub_category, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -30,7 +30,7 @@ class SubCategoriesController < ApplicationController
 
   def destroy
     @sub_category.destroy
-    redirect_to new_category_sub_category_path, status: :see_other
+    redirect_to category_path(@category), status: :see_other
   end
 
   private
