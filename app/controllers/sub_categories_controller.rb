@@ -1,6 +1,6 @@
 class SubCategoriesController < ApplicationController
+  before_action :set_category, only: [:show, :new, :create]
   before_action :set_sub_category, only: [:show, :edit, :update, :destroy]
-  before_action :set_category, only: [:new, :create]
 
   def index
     @sub_categories = SubCategory.all
