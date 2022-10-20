@@ -1,7 +1,10 @@
 
-    <%= render "shared/navbar" %>
-    <div class= "content-container">
-    <%= render "shared/form", category: @category %>
-    </div>
-    <br>
-    <%= link_to "Back", :back %>
+<%= render "shared/navbar" %>
+
+<div class= "content-container">
+  <%= render "shared/form", category: @category %>
+</div>
+<br>
+
+<%= link_to "Back", :back %>
+<%= render "shared/footer" %>
