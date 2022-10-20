@@ -3,6 +3,15 @@
   background: whitesmoke;
 }
 
+.navbar {
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -15,4 +24,10 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
