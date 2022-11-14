@@ -11,16 +11,16 @@
 <br>
 
 <ul>
-<div class="cards pt-3" style="margin-left: 60px">
+<div class="cards pt-3" style="margin-left: 70px">
   <% @categories.each do |category| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <li><%= link_to category.title, category_path(category) %></li>
+      <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
     </div>
   <% end %>
 </div>
 </ul>
 <br>
-<div style="margin-left: 530px">
+<div style="margin-left: 520px">
   <%= link_to "Add New Category", new_category_path(@categories), class: "btn-flat btn-lg"%>
 </div>
 <br>
