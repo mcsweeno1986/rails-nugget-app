@@ -3,7 +3,6 @@
   <div class="container">
     <h1>NUGGET <strong>share your favourites</strong> with <strong>your favourites</strong>!</h1>
     <p>A place to store your favourite things and share with your favourite people</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
 
@@ -12,7 +11,7 @@
 <br>
 
 <ul>
-<div class="cards pt-3">
+<div class="cards pt-3" style="margin-left: 60px">
   <% @categories.each do |category| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
       <li><%= link_to category.title, category_path(category) %></li>
@@ -21,7 +20,9 @@
 </div>
 </ul>
 <br>
-<%= link_to "Add New Category", new_category_path(@categories) %>
+<div style="margin-left: 530px">
+  <%= link_to "Add New Category", new_category_path(@categories), class: "btn-flat btn-lg"%>
+</div>
 <br>
 <br>
 <br>
