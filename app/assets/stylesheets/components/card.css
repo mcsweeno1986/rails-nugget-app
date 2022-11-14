@@ -21,6 +21,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   align-items: center;
+  padding-bottom: 24px;
 }
 
 // Smallest device
