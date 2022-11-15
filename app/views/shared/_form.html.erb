@@ -1,4 +1,4 @@
 <%= simple_form_for (@categories) do |f| %>
-  <%= f.input :title %>
+  <%= f.input :title, collection: ['Holidays', 'Restaurants', 'Food', 'Animals', 'Beauty', 'Cars', 'Music', 'Hotels', 'Cafes', 'Miscellaneous' ], prompt: "Select Your Category", include_blank: false %>
   <%= f.submit %>
 <% end %>
