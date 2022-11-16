@@ -1,0 +1,39 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #7FB069;
+}
+
+.navbar {
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.nav-link {
+  color: #f4eded !important;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#navbarDropdown {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}

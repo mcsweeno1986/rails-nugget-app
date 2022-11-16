@@ -13,9 +13,67 @@
 <ul>
 <div class="cards pt-3" style="margin-left: 70px">
   <% @categories.each do |category| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
-    </div>
+      <% if category.title.include?("Restaurants") %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Holidays")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmVhY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Local Favs")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1619681202742-151773758844?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fExvY2FsJTIwZmF2b3VyaXRlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Travel")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Books")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Ym9va3N8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Pets")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGV0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Streaming")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1586899028174-e7098604235b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmV0ZmxpeHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Films")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2luZW1hfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Recipes")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1604909052868-dd2ef1e53daa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fHJlY2lwZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Exercise")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1616279967983-ec413476e824?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Wellness")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1620733723572-11c53f73a416?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1hc3NhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Music")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG11c2ljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Accomodation")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fEhvdGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+       <% elsif category.title.include?("Random")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1631426964394-06606872d836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bWlzY2VsbGFuZW91c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% elsif category.title.include?("Culture")%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG11c2V1bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60)">
+          <li><%= link_to category.title, category_path(category), class:"card-category" %></li>
+        </div>
+      <% end %>
   <% end %>
 </div>
 </ul>

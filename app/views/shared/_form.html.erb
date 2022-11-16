@@ -1,4 +1,4 @@
 <%= simple_form_for (@categories) do |f| %>
-  <%= f.input :title, collection: ['Local Favs', 'Travel', 'Books', 'Streaming', 'Films', 'Exercise', 'Holidays', 'Restaurants', 'Food', 'Animals', 'Beauty', 'Cars', 'Music', 'Hotels', 'Cafes', 'Miscellaneous' ].sort!, prompt: "Select Your Category", include_blank: false %>
+  <%= f.input :title, collection: ['Local Favs', 'Travel', 'Books', 'Streaming', 'Films', 'Exercise', 'Holidays', 'Restaurants', 'Recipes', 'Pets', 'Wellness', 'Music', 'Accomodation', 'Culture', 'Random' ].sort!, prompt: "Select Your Category", include_blank: false %>
   <%= f.submit %>
 <% end %>
