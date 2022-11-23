@@ -1,3 +1,13 @@
+<%= render "shared/navbar" %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80);">
+  <div class="container">
+    <h1>NUGGET <strong>share your favourites</strong> with <strong>your favourites</strong>!</h1>
+    <p>A place to store your favourite things and share with your favourite people</p>
+  </div>
+</div>
+
+<div class="signup-form">
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
@@ -12,9 +22,12 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions, btn-flat">
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
-
+<br>
 <%= render "devise/shared/links" %>
+</div>
+
+<%= render "shared/footer" %>
