@@ -13,6 +13,7 @@
 }
 
 .btn-flat {
+  width: 200px;
   color: #F4EDED;
   text-decoration: none;
   border: 1px solid #7FB069;
@@ -20,6 +21,7 @@
   border-radius: 4px;
   background: #7FB069;
   transition: background 0.3s ease;
+  text-align: center;
 }
 
 .btn-flat:hover {

@@ -1,20 +1,34 @@
-<h2><%= @category.title %></h2>
+<%= render "shared/navbar" %>
+<div class="container mt-5">
+  <h2><%= @category.title %></h2>
 
-<ul>
-<div class="cards pt-3">
+  <ul>
   <% @category.sub_categories.each do |sub_category| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <li><%= link_to sub_category.name, category_sub_category_path(@category, sub_category) %></li>
+  <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <li><%= sub_category.name %></li>
+          <li><%= sub_category.location %></li>
+          <li><%= sub_category.rating %></li>
+          <li><%= sub_category.review %></li>
+        </div>
+        <div>
+        <%# link_to "edit",
+        edit_category_sub_category_path(@category) %>
+        <%= link_to "delete",
+        @sub_categories_path,
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+  </div>
+    <% end %>
+  </ul>
+    <div>
+      <%= link_to "Add New", new_category_sub_category_path(@category) %>
+      <%= link_to "Back", :back %>
+      <%= link_to "Home", categories_path %>
     </div>
-  <% end %>
 </div>
-</ul>
-
-<%= link_to "Add New", new_category_sub_category_path(@category) %>
-<%= link_to "Back", :back %>
-
-
-
+<%= render "shared/footer" %>
 
 <%# <%= link_to "Delete",
   sub_category_path(@sub_category),
