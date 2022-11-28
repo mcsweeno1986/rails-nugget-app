@@ -13,6 +13,8 @@
           <li><%= sub_category.review %></li>
         </div>
         <div>
+        <%= link_to "more details",
+        category_sub_category_path(@category) %>
         <%= link_to "edit",
         edit_category_sub_category_path(@category) %>
         <%= link_to "delete",
