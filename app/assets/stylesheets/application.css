@@ -18,3 +18,6 @@
  @import url("components/btn.css");
  @import url("components/navbar.css");
  @import url("components/footer.css");
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
