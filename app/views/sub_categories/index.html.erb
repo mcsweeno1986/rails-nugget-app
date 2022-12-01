@@ -1,11 +1,6 @@
-<ul>
-<div class="cards pt-3">
-  <% @category.sub_categories.each do |sub_category| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <li><%= link_to sub_category.name, category_sub_category_path(sub_category) %></li>
-    </div>
-  <% end %>
-</div>
-</ul>
-<br>
-<%# <%= link_to "Add New Category", new_category_path(@categories) %> %>
+
+<%# <%= link_to "Add New Category", new_category_path(@categories) %>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>

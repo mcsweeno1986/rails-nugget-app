@@ -5,7 +5,7 @@
   <ul>
   <% @category.sub_categories.each do |sub_category| %>
   <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <img src="https://media.istockphoto.com/id/1426337048/photo/inspiration-showing-sign-coming-soon-concept-meaning-something-is-going-to-happen-in-really.jpg?b=1&s=170667a&w=0&k=20&c=ksAVnSLUAtppVjL-8xP3mIaUdjzG8huoJI1UfRUsev0=" />
         <div class="card-product-infos">
           <li><%= sub_category.name %></li>
           <li><%= sub_category.location %></li>
@@ -13,6 +13,8 @@
           <li><%= sub_category.review %></li>
         </div>
         <div>
+        <%= link_to "more details",
+        category_sub_category_path(@category) %>
         <%= link_to "edit",
         edit_category_sub_category_path(@category) %>
         <%= link_to "delete",
