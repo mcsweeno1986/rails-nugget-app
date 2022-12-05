@@ -13,8 +13,10 @@
           <li><%= sub_category.review %></li>
         </div>
         <div>
+        <%= link_to "more details",
+        category_sub_category_path(@category, sub_category) %>
         <%= link_to "edit",
-        edit_category_sub_category_path(@category) %>
+        edit_category_sub_category_path(@category, sub_category) %>
         <%= link_to "delete",
         @sub_categories_path,
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
