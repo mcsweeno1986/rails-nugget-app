@@ -39,11 +39,12 @@ class SubCategoriesController < ApplicationController
     @category = Category.find(params[:category_id])
   end
 
+  def set_sub_category
+    @sub_category = SubCategory.find(params[:id])
+  end
+
   def sub_category_params
     params.require(:sub_category).permit(:name, :location, :rating, :review)
   end
 
-  def set_sub_category
-    @sub_category = SubCategory.find(params[:id])
-  end
 end
