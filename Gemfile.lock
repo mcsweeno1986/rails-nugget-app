@@ -122,6 +122,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jsbundling-rails (1.0.3)
+      railties (>= 6.0.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -156,6 +158,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-proxy (0.7.4)
+      rack
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.4)
@@ -198,6 +202,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    semantic_range (3.0.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -228,6 +233,11 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
+    webpacker (5.4.3)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket (1.2.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
@@ -248,6 +258,7 @@ DEPENDENCIES
   geocoder
   importmap-rails
   jbuilder
+  jsbundling-rails (~> 1.0)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
   selenium-webdriver
@@ -259,6 +270,7 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  webpacker (~> 5.2, >= 5.2.1)
 
 RUBY VERSION
    ruby 3.0.3p157

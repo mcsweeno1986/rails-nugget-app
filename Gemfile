@@ -71,3 +71,6 @@ end
 gem "simple_form", github: "heartcombo/simple_form"
 gem "devise"
 gem "geocoder"
+gem 'webpacker', '~> 5.2', '>= 5.2.1'
+
+gem "jsbundling-rails", "~> 1.0"
