@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_21_133703) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_01_130145) do
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -22,12 +22,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_21_133703) do
 
   create_table "sub_categories", force: :cascade do |t|
     t.string "name"
-    t.string "location"
+    t.string "address"
     t.integer "rating"
     t.text "review"
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["category_id"], name: "index_sub_categories_on_category_id"
   end
 

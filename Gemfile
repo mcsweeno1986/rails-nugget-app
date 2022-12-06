@@ -2,7 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.3"
-
+gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
@@ -70,3 +70,7 @@ end
 
 gem "simple_form", github: "heartcombo/simple_form"
 gem "devise"
+gem "geocoder"
+gem 'webpacker', '~> 5.2', '>= 5.2.1'
+
+gem "jsbundling-rails", "~> 1.0"

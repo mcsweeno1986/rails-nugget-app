@@ -18,3 +18,4 @@
  @import url("components/btn.css");
  @import url("components/navbar.css");
  @import url("components/footer.css");
+ @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";

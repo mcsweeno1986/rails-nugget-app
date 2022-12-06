@@ -4,6 +4,12 @@ class SubCategoriesController < ApplicationController
 
   def index
     @sub_categories = SubCategory.all
+    @markers = @sub_categories.geocoded.map do |sub_category|
+      {
+        lat: sub_category.latitude,
+        lng: sub_category.longitude
+      }
+    end
   end
 
   def show
@@ -44,7 +50,7 @@ class SubCategoriesController < ApplicationController
   end
 
   def sub_category_params
-    params.require(:sub_category).permit(:name, :location, :rating, :review)
+    params.require(:sub_category).permit(:name, :address, :rating, :review)
   end
 
 end
