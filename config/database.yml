@@ -22,6 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
-  database: blog_development
-  pool: 5
+  database: ENV['PGHOST']
+  username: ENV['PGUSER']
+  password: ENV['PGPASSWORD']
