@@ -1,11 +1,27 @@
 <%= render "shared/navbar" %>
-
-<%= simple_form_for [@category, @sub_categories] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :rating %>
-  <%= f.input :review %>
-  <%= f.submit %>
-<% end %>
-
+<br>
+<br>
+<div class="container">
+  <%= "...One of My New Favourites" %>
+  <h2><%= @category.title %></h2>
+<br>
+<br>
+  <div class="mb-3">
+    <%= simple_form_for [@category, @sub_categories] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :rating %>
+      <%= f.input :review %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%= link_to "Back", :back %>
+    <%= link_to "Home", categories_path %>
+</div>
 <%= render "shared/footer" %>
